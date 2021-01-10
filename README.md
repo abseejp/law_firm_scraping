@@ -1,4 +1,4 @@
-# law_firm_scraping
+# Web Crawling
 
 This simple code would help you scrape the list of attornies from this site: https://www.martindale.com/search/attorneys/?term=2&sort=compositeName&sortType=DESC
 
