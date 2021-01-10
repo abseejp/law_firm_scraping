@@ -8,6 +8,8 @@ class ScrapeAttorneySpider(scrapy.Spider):
 
 
 
+
+
     def parse(self, response):
         item = AttorneyItem()
         attorney_name = response.css('.detail_title a').css('::text').extract()
