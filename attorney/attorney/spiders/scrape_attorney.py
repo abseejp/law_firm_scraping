@@ -11,12 +11,22 @@ class ScrapeAttorneySpider(scrapy.Spider):
 
 
     def parse(self, response):
-        item = AttorneyItem()
+        # item = AttorneyItem()
         attorney_name = response.css('.detail_title a').css('::text').extract()
+        attorney_location = response.css('.detail_location').css('::text').extract()
 
-        item["attorney_name"] = attorney_name
+       
+        attorney_name = attorney_name
+        location = attorney_location
 
-        yield item
+
+
+        yield {
+            "name": attorney_name,
+            "location": location
+
+
+        }
 
 ### CLI code to run the code: scrapy crawl scrape_attorney
 ### code to export the result to csv: scrapy crawl scrape_attorney -o item.csv

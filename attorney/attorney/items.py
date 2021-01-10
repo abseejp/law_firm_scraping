@@ -8,5 +8,8 @@ import scrapy
 
 class AttorneyItem(scrapy.Item):
     # define the fields for your item here like:
-    attorney_name = scrapy.Field()
+    # attorney_name = scrapy.Field()
+    # attorney_location = scrapy.Field()
+    pass
+
     
